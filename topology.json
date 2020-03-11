@@ -1,0 +1,86 @@
+{
+    "name": "CCDC Scrimmage",
+    "date": "3/15/2020",
+    "teams": [1, 2, 3, 4, 5],
+    "networks": [
+        {
+            "name": "internal",
+            "ip": "10.x.108",
+            "hosts": [
+                {
+                    "name": "Canine",
+                    "os":"VyOS",
+                    "ip":"1",
+                    "services": ""
+                },
+                {
+                    "name": "Samford",
+                    "os":"Windows Server 2016",
+                    "ip":"20",
+                    "services": "AD, DNS, IIS, FTP"
+                },
+		        {
+                    "name": "Blake",
+                    "os":"Windows Server 2019",
+                    "ip":"21",
+                    "services": "ICMP, SMB"
+                },
+                {
+                    "name": "Carter",
+                    "os":"Windows Server 2019",
+                    "ip":"22",
+                    "services": "WinRM"
+                },
+                {
+                    "name": "Rogers",
+                    "os":"Windows Server 2019",
+                    "ip":"23",
+                    "services": "WINRM"
+                },
+                {
+                    "name": "Hayden",
+                    "os":"Ubuntu 18",
+                    "ip":"24",
+                    "services": "ICMP, elastic, SSH"
+                },
+                {
+                    "name": "Alexander",
+                    "os":"Ubuntu 16",
+                    "ip":"25",
+                    "services": "ICMP, HTTP"
+                },
+                {
+                    "name": "Studeman",
+                    "os":"CentOS 7",
+                    "ip":"26",
+                    "services": "ICMP, SSH"
+                },
+                {
+                    "name": "Gayler",
+                    "os":"Ubuntu 16",
+                    "ip":"27",
+                    "services": "WIKI.js, PostgreSQL"
+                },
+                {
+                    "name": "Workstation 1",
+                    "os":"Win 10",
+                    "ip":"202",
+                    "services": ""
+                }
+            ]
+    },
+    {
+            "name": "external",
+	        "ip":"10.64.x",
+            "hosts": [
+	    {
+		    "name":"Traveler",
+		    "os":"Win 10",
+		    "ip":"69",
+		    "services":""
+	    }
+        ]
+    }
+    ]
+}
+

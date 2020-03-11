@@ -4,6 +4,9 @@ import logging
 from flask import (request, render_template, make_response, Response, url_for,
                    redirect, abort, jsonify)
 
+from flask_httpauth import HTTPBasicAuth
+from werkzeug.security import generate_password_hash, check_password_hash
+
 #from .functions import saveData
 
 
@@ -17,8 +20,21 @@ BOARDCACHE = ""
 BOARDCACHE_TIME = 0
 BOARDCACHE_UPDATED = True
 
+#Auth
+auth = HTTPBasicAuth()
+
+users = {
+    "admin": generate_password_hash("stardust")
+}
+
+@auth.verify_password
+def login(username, password):
+    if username in users:
+        return check_password_hash(users.get(username), password)
+    return False
 
 @app.route('/', methods=['GET'])
+@auth.login_required
 def index():
     '''
     Return the board with the most recent data (cached for 10 seconds)
